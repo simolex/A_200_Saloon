@@ -1,9 +1,11 @@
-const modalBtn = document.querySelector(".more");
+const modalBtns = document.querySelectorAll(".more");
 const modalForm = document.querySelector(".modal");
 
-modalBtn.addEventListener("click", () => {
-  modalForm.classList.remove("hidden");
-});
+for (let modalBtn of modalBtns) {
+  modalBtn.addEventListener("click", () => {
+    modalForm.classList.remove("hidden");
+  });
+}
 
 modalForm.addEventListener("click", (event) => {
   if (
